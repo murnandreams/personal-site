@@ -4,176 +4,226 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Devin Murnan: software engineer with 7 years of experience building web applications.">
-  <title>Devin Murnan | Software Engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <title>Devin's Personal Site</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="shortcut icon" href="favicon.ico">
+
 </head>
 
 <body>
-  <header class="topbar">
-    <a class="brand" href="index.html">DM<span>.</span></a>
-    <nav class="site-nav" aria-label="Site">
-      <a href="index.html" aria-current="page">CV</a>
-      <a href="hobbies.html">Hobbies</a>
-      <a href="poetry.html">Poetry</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <table class="profile">
+    <tr>
+                                                          <!-- Quick and dirty inline CSS, future projects utilize a stylesheet as is best practice -->
+      <td><img src="images/Picture1.jpg" alt="Devin Profile Picture" style="width:200px;height:200px;border-radius:50%;">
+        <!--  <img src="images/devin.jpg" alt="Backup image"> -->
+      </td>
+      <td>
+        <h1>Devin Murnan🍋</h1>
+        <p><em>Software Engineering Apprentice at <strong><a href="https://www.wwt.com/">World Wide Technology</a></strong></em></p>
+        <!-- Site Directory -->
+        <nav class="site-nav">
+          <a href="hobbies.html">Hobbies</a>
+          <a href="contact.html">Contact Me</a>
+          <a href="poetry.html">Poetry</a>
+        </nav>
+        <p>Hey there! I'm a Software Engineering Apprentice employed at World Wide Technology.
+          I am an aspiring web/application developer, I built this website in my spare time, in an effort to teach myself about HTML and CSS.
+          I make my own cold brew coffee, and I build computers for friends and family.</p>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <h3 class="centered">Relevant Education</h3>
 
-  <main class="cv">
-    <!-- ---------- Sidebar ---------- -->
-    <aside class="cv-sidebar">
-      <img class="avatar" src="images/Picture1.jpg" alt="Portrait of Devin Murnan" width="160" height="160">
-      <h1 class="name">Devin Murnan</h1>
-      <p class="role">Software Engineer</p>
-      <p class="badge">7 years of experience</p>
+  <h5> Edwardsville High School</h5>
+  <ul>
+    <li>Programming in Java(Special Projects)
+      <ul>
+        <li><a href="http://www.meinzeit.com/webTeach/projects/student/povRay/index.htm">Featured on class website for "Animated Blobs" in spring of 2015</a></li>
+      </ul>
+    </li>
+    <li>Networking</li>
+  </ul>
 
-      <section class="side-block">
-        <h2>Contact</h2>
-        <ul class="contact-list">
-          <li><span>Email</span><a href="mailto:devin.murnan@gmail.com">devin.murnan@gmail.com</a></li>
-          <li><span>Location</span>St. Louis Metro, USA</li>
-          <li><span>Web</span><a href="contact.html">Send me a message</a></li>
-        </ul>
-      </section>
+  <h5>Lewis and Clark Community College</h5>
+  <ul>
+    <li>PC Servicing</li>
+    <li>Computer Network and System Internship</li>
+    <li>Introduction To Computer Networking</li>
+  </ul>
 
-      <section class="side-block">
-        <h2>Languages</h2>
-        <ul class="chips">
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>Java</li>
-          <li>Python</li>
-          <li>HTML</li>
-          <li>CSS</li>
-        </ul>
-      </section>
+  <h5>Professional Training</h5>
+  <ul>
+    <li><a href="https://wwt.udemy.com/course/the-complete-web-development-bootcamp/">The Complete 2021 Web Development Bootcamp</a>
+      <ul>
+        <li>Authored by Dr. Angela Yu <a href="https://www.appbrewery.co/">The App Brewery</a></li>
+      </ul>
+    </li>
+  </ul>
+  <hr>
+  <!--Begin Skills Section, uses tables to display skill and skill proficiency-->
+  <h3 class="centered">Skills</h3>
 
-      <section class="side-block">
-        <h2>Frameworks &amp; Libraries</h2>
-        <ul class="chips">
-          <li>Angular</li>
-          <li>React</li>
-          <li>Bootstrap</li>
-        </ul>
-      </section>
+  <table class="skills">
+    <tbody>
+      <tr>
+        <th scope="rowgroup">Programming Languages</th>
+      </tr>
 
-      <section class="side-block">
-        <h2>Tools &amp; Practices</h2>
-        <ul class="chips">
-          <li>Git &amp; GitHub</li>
-          <li>Visual Studio</li>
-          <li>REST APIs</li>
-          <li>Agile / Scrum</li>
-          <li>SOLID</li>
-          <li>Code Review</li>
-        </ul>
-      </section>
+      <tr>
+        <td>Javascript</td>
+      </tr>
 
-      <section class="side-block">
-        <h2>Infrastructure</h2>
-        <ul class="chips">
-          <li>Networking</li>
-          <li>Servers</li>
-          <li>Hardware Troubleshooting</li>
-          <li>Oracle Inventory</li>
-          <li>Salesforce</li>
-        </ul>
-      </section>
-    </aside>
+      <tr>
+        <td>HTML</td>
+      </tr>
 
-    <!-- ---------- Main content ---------- -->
-    <div class="cv-main">
-      <section class="card">
-        <h2 class="section-title">Profile</h2>
-        <p class="lead">
-          Software engineer with <strong>7 years of experience</strong> designing, building and shipping web
-          applications for enterprise customers. I grew from hands-on infrastructure work into full-stack
-          development, so I care about the whole picture: clean, well-tested code, solid architecture and
-          software that is pleasant to use and easy to run.
-        </p>
-        <p>
-          Comfortable owning features end to end and working closely with product
-          and customer teams. Outside of work I brew my own cold brew coffee 🍋 and build computers for friends
-          and family.
-        </p>
-      </section>
+      <tr>
+        <td>CSS</td>
+      </tr>
 
-      <section class="card">
-        <h2 class="section-title">Experience</h2>
-        <ol class="timeline">
-          <li>
-            <div class="timeline-head">
-              <h3>Software Engineer</h3>
-              <span class="dates">2022 – Present</span>
-            </div>
-            <p class="org"><a href="https://www.wwt.com/">World Wide Technology</a></p>
-            <ul>
-              <li>Build and maintain customer-facing web applications for clients under contract with WWT as part of
-                a cross-functional Agile team.</li>
-              <li>Develop front-end features in <strong>Angular</strong> and <strong>React</strong> and integrate
-                them with REST APIs and <strong>Java</strong> services.</li>
-              <li>Follow SOLID design principles and take part in code review to keep the codebase clean and maintainable.</li>
-            </ul>
-          </li>
-          <li>
-            <div class="timeline-head">
-              <h3>Software Engineering Apprentice</h3>
-              <span class="dates">2021 – 2022</span>
-            </div>
-            <p class="org"><a href="https://www.wwt.com/">World Wide Technology</a></p>
-            <ul>
-              <li>Trained on industry-level programming standards, Agile methodology and SOLID principles.</li>
-              <li>Contributed to customer application builds alongside a team of senior developers.</li>
-            </ul>
-          </li>
-          <li>
-            <div class="timeline-head">
-              <h3>L4 Integration Technician</h3>
-              <span class="dates">2019 – 2021</span>
-            </div>
-            <p class="org"><a href="https://www.wwt.com/">World Wide Technology</a></p>
-            <ul>
-              <li>Managed warehouse material with <strong>Oracle Inventory</strong> and <strong>SecureCRT</strong>;
-                used <strong>Salesforce</strong> for cross-organization communication.</li>
-              <li>Supported integration programs for clients including Twitch and Amazon; maintained Cisco, HP and
-                Dell servers to WWT ESD standards.</li>
-            </ul>
-          </li>
-        </ol>
-        <p class="earlier">
-          <strong>Earlier:</strong> Computer Network &amp; Systems Intern, Lewis and Clark Community College (2016);
-          Catering Manager, Jimmy John's (2017 – 2019); Flow Team, Target (2016 – 2017).
-        </p>
-      </section>
+      <tr>
+        <td>Python</td>
+      </tr>
 
-      <section class="card">
-        <h2 class="section-title">Education &amp; Training</h2>
-        <ul class="edu">
-          <li>
-            <h3>Lewis and Clark Community College</h3>
-            <p>Introduction to Computer Networking · PC Servicing · Computer Network and Systems Internship</p>
-          </li>
-          <li>
-            <h3><a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">The Complete Web Development Bootcamp</a></h3>
-            <p>Dr. Angela Yu, <a href="https://www.appbrewery.co/">The App Brewery</a></p>
-          </li>
-          <li>
-            <h3>Edwardsville High School</h3>
-            <p>Programming in Java (Special Projects): <a href="http://www.meinzeit.com/webTeach/projects/student/povRay/index.htm">featured on the class website for "Animated Blobs"</a> (2015)</p>
-          </li>
-        </ul>
-      </section>
-    </div>
-  </main>
+      <tr>
+        <td>Java</td>
+      </tr>
+    </tbody>
 
-  <footer class="site-footer">
-    <p>© Devin Murnan · Hand-built with HTML &amp; CSS</p>
-  </footer>
+    <tbody>
+      <tr>
+        <th scope="rowgroup">Libraries</th>
+      </tr>
+      <tr>
+        <td>React</td>
+      </tr>
+      <tr>
+        <td>Bootstrap</td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+        <th scope="rowgroup">Frameworks</th>
+      </tr>
+      <tr>
+        <td>Angular</td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <tr>
+        <th scope="rowgroup">Hardware</th>
+      </tr>
+      <tr>
+        <td>Hardware Troubleshooting</td>
+      </tr>
+
+      <tr>
+        <td>Networking</td>
+      </tr>
+
+      <tr>
+        <td>Cabling</td>
+      </tr>
+
+      <tr>
+        <td>A/V Setup</td>
+      </tr>
+      <tr>
+        <td>Servers</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+
+  <h3 class="centered">Relevant Software Proficiencies</h3>
+  <ul>
+    <li><a href="https://www.oracle.com/applications/ebusiness/">Oracle</a>
+      <ul>
+        <li>Inventory Management Module, used for visibility of warehouse material.</li>
+      </ul>
+    </li>
+    <li><a href="https://www.vandyke.com/products/securecrt/">SecureCRT</a>
+      <ul>
+        <li>Terminal emulation used for inventory management.</li>
+      </ul>
+    </li>
+    <li><a href="https://atom.io/">Atom</a>
+      <ul>
+        <li>My first IDE, used to create this site.</li>
+      </ul>
+    </li>
+    <li><a href="https://visualstudio.microsoft.com/">Microsoft Visual Studio</a>
+      <ul>
+        <li>Preferred IDE.</li>
+      </ul>
+    </li>
+    <li><a href="https://desktop.github.com/">Github Desktop</a>
+      <ul>
+        <li>Version control for projects.</li>
+      </ul>
+    </li>
+    <li>Salesforce Lightning
+      <ul>
+        <li>Creation of CCCs to promote clear communication among teammates.</li>
+      </ul>
+    </li>
+    <li>Microsoft 365, Excel, Word and Powerpoint</li>
+  </ul>
+
+  <hr>
+
+  <h3 class="centered">Work Experience</h3>
+  <table class="work">
+    <thead>
+      <tr>
+        <th>Dates</th>
+        <th>Company</th>
+        <th>Job Title</th>
+        <th>Responsiblities</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2016-2017</td>
+        <td>Target</td>
+        <td>Flow Team</td>
+        <td>Pick and stock product, provide excellent customer service to shoppers.</td>
+      </tr>
+      <tr>
+        <td>2016</td>
+        <td>Lewis and Clark Community College</td>
+        <td>Computer Network and Systems internship</td>
+        <td>Design, maintain and implement network solutions for the Trimpe Advanced Technology Center. Terminate and run RJ45 cables to provide network connectivity to student workstations. Active collaboration on a team of three to achieve network
+          solutions.</td>
+      </tr>
+      <tr>
+        <td>2017-2019</td>
+        <td>Jimmy Johns</td>
+        <td>Catering Manager</td>
+        <td>Maintained customer relations by sampling to local functions and businesses. Responsible for training employees on guerilla marketing techniques. Responsible for mapping out local businesses by surveying the store's delivery zone.
+          Maintained excellent customer service and cleanliness in a fast paced environment.</td>
+      </tr>
+      <tr>
+        <td>2019-2021</td>
+        <td>World Wide Technology</td>
+        <td>L4 Integration Technician</td>
+        <td>Managed systematic warehouse material through the use of <strong>Oracle Inventory</strong>, <strong>SecureCRT</strong>. Used <strong>Salesforce</strong> for communication cross-organization. Assisted with multiple programs including <strong>Twitch</strong> and <strong>Amazon</strong> in the
+          warehouse lab. Previously
+          responsible for performing physical maintenance on Cisco, HP, and Dell servers in accordance to WWT ESD Standards.
+        </td>
+      </tr>
+      <tr>
+        <td>2021-Present</td>
+        <td>World Wide Technology</td>
+        <td>Internal Software Engineering Apprentice</td>
+        <td>Entry level learning position focused towards training on industry-level programming standards. 
+          Works on a team of developers to assist with building applications for customers that have contracted with WWT. Focus on AGILE programming methodology and SOLID principles.</td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 
 </html>

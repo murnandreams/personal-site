@@ -4,54 +4,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Devin Murnan</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <title>Contact Me</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="shortcut icon" href="favicon.ico">
+
 </head>
 
+
 <body>
-  <header class="topbar">
-    <a class="brand" href="index.html">DM<span>.</span></a>
-    <nav class="site-nav" aria-label="Site">
-      <a href="index.html">CV</a>
-      <a href="hobbies.html">Hobbies</a>
-      <a href="poetry.html">Poetry</a>
-      <a href="contact.html" aria-current="page">Contact</a>
-    </nav>
-  </header>
-
-  <main class="page">
-    <header class="page-header">
-      <span class="eyebrow">Get in touch</span>
-      <h1>Contact Me</h1>
-      <p>Open to new opportunities, collaborations and a good chat about software.</p>
-    </header>
-
-    <div class="contact-grid">
-      <section class="contact-card">
-        <h2>Email</h2>
-        <p><a href="mailto:devin.murnan@gmail.com">devin.murnan@gmail.com</a></p>
-        <p>I usually reply within a couple of days.</p>
-      </section>
-
-      <form class="contact-form" enctype="text/plain" action="mailto:devin.murnan@gmail.com" method="post">
-        <label for="your-name">Your name</label>
-        <input type="text" id="your-name" name="YourName" autocomplete="name" required>
-        <label for="your-email">Your email</label>
-        <input type="email" id="your-email" name="YourEmail" autocomplete="email" required>
-        <label for="your-message">Your message</label>
-        <textarea id="your-message" name="YourMessage" rows="7" required></textarea>
-        <button type="submit">Send message</button>
-      </form>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <p>© Devin Murnan · Hand-built with HTML &amp; CSS</p>
-  </footer>
+  <h1>Contact Me</h1>
+  <!-- Site Directory -->
+  <nav class="site-nav">
+    <a href="index.html">Index</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="poetry.html">Poetry</a>
+  </nav>
+  <hr>
+  <section class="centered">
+    <table class="contact-info">
+      <tr>
+        <td>Email:</td>
+        <td>devin.murnan@gmail.com</td>
+      </tr>
+    </table>
+    <form class="contact-form" enctype="text/plain" action="mailto:devin.murnan@gmail.com" method="post">
+      <label for="your-name">Your Name:</label>
+      <input type="text" id="your-name" name="YourName" value="">
+      <label for="your-email">Your Email:</label>
+      <input type="email" id="your-email" name="YourEmail" value="">
+      <label for="your-message">Your Message:</label>
+      <textarea id="your-message" name="YourMessage" cols="30" rows="10"></textarea>
+      <input type="submit" name="Submit" value="Send Message">
+    </form>
+  </section>
 </body>
 
 </html>
