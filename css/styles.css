@@ -567,17 +567,20 @@ img {
   box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.25);
 }
 
-.contact-form input[type="submit"] {
+.contact-form button {
   margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  font: inherit;
   border: none;
+  border-radius: 10px;
   background: var(--ink);
   color: var(--accent);
   font-weight: 700;
   cursor: pointer;
 }
 
-.contact-form input[type="submit"]:hover,
-.contact-form input[type="submit"]:focus-visible {
+.contact-form button:hover,
+.contact-form button:focus-visible {
   background: #1e293b;
 }
 
