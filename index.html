@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Devin's Personal Site</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="shortcut icon" href="favicon.ico">
@@ -10,7 +11,7 @@
 </head>
 
 <body>
-  <table cellspacing="20">
+  <table class="profile">
     <tr>
                                                           <!-- Quick and dirty inline CSS, future projects utilize a stylesheet as is best practice -->
       <td><img src="images/Picture1.jpg" alt="Devin Profile Picture" style="width:200px;height:200px;border-radius:50%;">
@@ -20,9 +21,11 @@
         <h1>Devin Murnan🍋</h1>
         <p><em>Software Engineering Apprentice at <strong><a href="https://www.wwt.com/">World Wide Technology</a></strong></em></p>
         <!-- Site Directory -->
-        <a href="Hobbies.html">Hobbies</a>
-        <a href="contact.html">Contact Me</a>
-        <a href="poetry.html">Poetry</a>
+        <nav class="site-nav">
+          <a href="hobbies.html">Hobbies</a>
+          <a href="contact.html">Contact Me</a>
+          <a href="poetry.html">Poetry</a>
+        </nav>
         <p>Hey there! I'm a Software Engineering Apprentice employed at World Wide Technology.
           I am an aspiring web/application developer, I built this website in my spare time, in an effort to teach myself about HTML and CSS.
           I make my own cold brew coffee, and I build computers for friends and family.</p>
@@ -30,9 +33,7 @@
     </tr>
   </table>
   <hr>
-  <center>
-    <h3>Relevant Education</h3>
-  </center>
+  <h3 class="centered">Relevant Education</h3>
 
   <h5> Edwardsville High School</h5>
   <ul>
@@ -59,13 +60,13 @@
   </ul>
   <hr>
   <!--Begin Skills Section, uses tables to display skill and skill proficiency-->
-  <center>
-    <h3>Skills</h3>
-  </center>
+  <h3 class="centered">Skills</h3>
 
-  <table cellspacing="10">
+  <table class="skills">
     <thead>
-      <th>Programming Languages</th>
+      <tr>
+        <th>Programming Languages</th>
+      </tr>
     </thead>
 
     <tbody>
@@ -92,7 +93,9 @@
     </tbody>
 
     <thead>
-      <th>Libraries</th>
+      <tr>
+        <th>Libraries</th>
+      </tr>
     </thead>
 
     <tbody>
@@ -105,7 +108,9 @@
     </tbody>
 
     <thead>
-      <th>Frameworks</th>
+      <tr>
+        <th>Frameworks</th>
+      </tr>
     </thead>
 
     <tbody>
@@ -114,9 +119,10 @@
       </tr>
     </tbody>
 
-    </tr>
     <thead>
-      <th>Hardware</th>
+      <tr>
+        <th>Hardware</th>
+      </tr>
     </thead>
     <tbody>
       <tr>
@@ -141,9 +147,7 @@
   </table>
   <hr>
 
-  <center>
-    <h3>Relevant Software Proficiencies</h3>
-  </center>
+  <h3 class="centered">Relevant Software Proficiencies</h3>
   <ul>
     <li><a href="https://www.oracle.com/applications/ebusiness/">Oracle</a></li>
     <ul>
@@ -174,10 +178,8 @@
 
   <hr>
 
-  <center>
-    <h3>Work Experience</h3>
-  </center>
-  <table>
+  <h3 class="centered">Work Experience</h3>
+  <table class="work">
     <thead>
       <tr>
         <th>Dates</th>
@@ -188,49 +190,42 @@
     </thead>
     <tbody>
       <tr>
-
+        <td>2016-2017</td>
+        <td>Target</td>
+        <td>Flow Team</td>
+        <td>Pick and stock product, provide excellent customer service to shoppers.</td>
       </tr>
-
+      <tr>
+        <td>2016</td>
+        <td>Lewis and Clark Community College</td>
+        <td>Computer Network and Systems internship</td>
+        <td>Design, maintain and implement network solutions for the Trimpe Advanced Technology Center. Terminate and run RJ45 cables to provide network connectivity to student workstations. Active collaboration on a team of three to achieve network
+          solutions.</td>
+      </tr>
+      <tr>
+        <td>2017-2019</td>
+        <td>Jimmy Johns</td>
+        <td>Catering Manager</td>
+        <td>Maintained customer relations by sampling to local functions and businesses. Responsible for training employees on guerilla marketing techniques. Responsible for mapping out local businesses by surveying the store's delivery zone.
+          Maintained excellent customer service and cleanliness in a fast paced environment.</td>
+      </tr>
+      <tr>
+        <td>2019-2021</td>
+        <td>World Wide Technology</td>
+        <td>L4 Integration Technician</td>
+        <td>Managed systematic warehouse material through the use of <strong>Oracle Inventory</strong>, <strong>SecureCRT</strong>. Used <strong>Salesforce</strong> for communication cross-organization. Assisted with multiple programs including <strong>Twitch</strong> and <strong>Amazon</strong> in the
+          warehouse lab. Previously
+          responsible for performing physical maintenance on Cisco, HP, and Dell servers in accordance to WWT ESD Standards.
+        </td>
+      </tr>
+      <tr>
+        <td>2021-Present</td>
+        <td>World Wide Technology</td>
+        <td>Internal Software Engineering Apprentice</td>
+        <td>Entry level learning position focused towards training on industry-level programming standards. 
+          Works on a team of developers to assist with building applications for customers that have contracted with WWT. Focus on AGILE programming methodology and SOLID principles.</td>
+      </tr>
     </tbody>
-    <tfoot>
-
-    </tfoot>
-    <tr>
-      <td>2016-2017</td>
-      <td>Target</td>
-      <td>Flow Team</td>
-      <td>Pick and stock product, provide excellent customer service to shoppers.</td>
-    </tr>
-    <tr>
-      <td>2016</td>
-      <td>Lewis and Clark Community College</td>
-      <td>Computer Network and Systems internship</td>
-      <td>Design, maintain and implement network solutions for the Trimpe Advanced Technology Center. Terminate and run RJ45 cables to provide network connectivity to student workstations. Active collaboration on a team of three to achieve network
-        solutions.</td>
-    </tr>
-    <tr>
-      <td>2017-2019</td>
-      <td>Jimmy Johns</td>
-      <td>Catering Manager</td>
-      <td>Maintained customer relations by sampling to local functions and businesses. Responsible for training employees on guerilla marketing techniques. Responsible for mapping out local businesses by surveying the store's delivery zone.
-        Maintained excellent customer service and cleanliness in a fast paced environment.</td>
-    </tr>
-    <tr>
-      <td>2019-2021</td>
-      <td>World Wide Technology</td>
-      <td>L4 Integration Technician</td>
-      <td>Managed systematic warehouse material through the use of <strong>Oracle Inventory</strong>, <strong>SecureCRT</strong>. Used <strong>Salesforce</strong> for communication cross-organization. Assisted with multiple programs including <strong>Twitch</strong> and <strong>Amazon</strong> in the
-        warehouse lab. Previously
-        responsible for performing physical maintenance on Cisco, HP, and Dell servers in accordance to WWT ESD Standards.
-      </td>
-    </tr>
-    <tr>
-      <td>2021-Present</td>
-      <td>World Wide Technology</td>
-      <td>Internal Software Engineering Apprentice</td>
-      <td>Entry level learning position focused towards training on industry-level programming standards. 
-        Works on a team of developers to assist with building applications for customers that have contracted with WWT. Focus on AGILE programming methodology and SOLID principles.</td>
-    </tr>
   </table>
 </body>
 
