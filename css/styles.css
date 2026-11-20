@@ -193,3 +193,204 @@ a:hover { text-decoration-color: currentColor; }
 }
 .skip-link:focus { transform: none; }
 .skip-link:focus-visible { outline-color: var(--color-on-accent); }
+
+/* 4 Layout ---------------------------------------------------------------- */
+.container {
+  width: min(100% - 2 * var(--space-m), var(--container));
+  margin-inline: auto;
+}
+main { flex: 1; }
+main:focus { outline: none; }
+
+.section { padding-block: var(--space-2xl); }
+.section--surface { background: var(--color-surface); }
+.section-header { max-width: 42rem; margin-bottom: var(--space-l); }
+.section-header--center { margin-inline: auto; text-align: center; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  margin: 0 0 var(--space-2xs);
+  color: var(--color-muted);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.eyebrow::before {
+  content: "";
+  width: 1.5rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-accent);
+}
+
+.lead { color: var(--color-muted); font-size: var(--step-1); line-height: 1.55; }
+.muted { color: var(--color-muted); }
+
+.grid {
+  display: grid;
+  gap: var(--space-m);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+}
+
+/* 5 Header & nav ---------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--color-border);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+}
+.site-header__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-s);
+  min-height: var(--header-height);
+}
+.brand {
+  font-family: var(--font-heading);
+  font-size: var(--step-1);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.brand__dot {
+  display: inline-block;
+  width: 0.45em;
+  height: 0.45em;
+  margin-left: 0.15em;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+.header-actions { display: flex; align-items: center; gap: var(--space-2xs); }
+
+.site-nav ul {
+  display: flex;
+  gap: var(--space-3xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-nav a {
+  display: block;
+  padding: var(--space-2xs) var(--space-xs);
+  border-radius: var(--radius);
+  color: var(--color-muted);
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav a:hover { background: var(--color-surface); color: var(--color-ink); }
+.site-nav a[aria-current="page"] {
+  color: var(--color-ink);
+  font-weight: 600;
+  box-shadow: inset 0 -3px 0 var(--color-accent);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-elevated);
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition);
+}
+.icon-button:hover { background: var(--color-surface); border-color: var(--color-border-strong); }
+.icon-button svg { width: 1.25rem; height: 1.25rem; }
+
+/* Theme toggle shows the icon of the theme you would switch to */
+.theme-toggle .icon-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+.menu-toggle { display: none; }
+
+@media (max-width: 47.99rem) {
+  .menu-toggle { display: inline-grid; }
+  .js .site-nav {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: calc(-1 * var(--space-m));
+    right: calc(-1 * var(--space-m));
+    display: none;
+    padding: var(--space-xs) var(--space-m) var(--space-m);
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+  }
+  .js .site-nav.is-open { display: block; }
+  .js .site-nav ul { flex-direction: column; }
+  .js .site-nav a { padding: var(--space-xs); }
+  .js .site-nav a[aria-current="page"] {
+    border-radius: var(--radius);
+    box-shadow: inset 3px 0 0 var(--color-accent);
+    background: var(--color-surface);
+  }
+  /* Without JS the links stay visible and wrap under the brand */
+  html:not(.js) .site-header__inner { flex-wrap: wrap; padding-block: var(--space-2xs); }
+  html:not(.js) .menu-toggle { display: none; }
+  html:not(.js) .site-nav ul { flex-wrap: wrap; }
+}
+
+/* 6 Buttons & pills ------------------------------------------------------- */
+.button-row { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xs);
+  min-height: 2.75rem;
+  padding: var(--space-2xs) var(--space-m);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition), border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.button svg { width: 1.1em; height: 1.1em; flex: none; }
+.button:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.button:active { transform: none; }
+
+/* Lemon fill always pairs with dark text */
+.button--primary { background: var(--color-accent); color: var(--color-on-accent); }
+.button--primary:hover { background: var(--color-accent-hover); }
+.button--primary:focus-visible { outline-color: var(--color-focus); }
+
+.button--secondary {
+  background: var(--color-elevated);
+  border-color: var(--color-border-strong);
+  color: var(--color-ink);
+}
+.button--secondary:hover { background: var(--color-surface); }
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pill {
+  padding: var(--space-3xs) var(--space-xs);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  font-size: var(--step--1);
+  font-weight: 500;
+}
