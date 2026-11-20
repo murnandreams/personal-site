@@ -520,9 +520,6 @@ main:focus { outline: none; }
 .hobby-list { margin: 0; padding: 0; list-style: none; }
 .hobby-card__title { margin: 0; font-size: var(--step-1); }
 .hobby-card__body > * { margin: 0; }
-@media (min-width: 48rem) {
-  .hobby-card--featured { grid-row: span 2; }
-}
 
 /* 11 Poetry --------------------------------------------------------------- */
 .prose {
@@ -566,7 +563,9 @@ main:focus { outline: none; }
   background: var(--color-surface);
 }
 .contact-email__address { flex: 1 1 12rem; margin: 0; font-weight: 600; overflow-wrap: anywhere; }
-.copy-status { min-height: 1.5em; margin: 0; color: var(--color-success); font-size: var(--step--1); }
+.copy-status { flex-basis: 100%; margin: 0; color: var(--color-success); font-size: var(--step--1); font-weight: 500; }
+/* Keep the live region in the DOM but out of the layout while it is empty */
+.copy-status:empty { position: absolute; }
 
 .divider {
   display: flex;
