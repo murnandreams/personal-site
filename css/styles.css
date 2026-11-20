@@ -234,7 +234,9 @@ main:focus { outline: none; }
   gap: var(--space-m);
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
 }
-.grid--4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
+.grid--4 { grid-template-columns: 1fr; }
+@media (min-width: 36rem) { .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 64rem) { .grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
 /* 5 Header & nav ---------------------------------------------------------- */
 .site-header {
@@ -394,6 +396,7 @@ main:focus { outline: none; }
   background: var(--color-surface);
   font-size: var(--step--1);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 /* 7 Cards ----------------------------------------------------------------- */
@@ -437,14 +440,18 @@ main:focus { outline: none; }
 .hero__role { margin-bottom: var(--space-s); color: var(--color-muted); font-size: var(--step-1); }
 .hero__role strong { color: var(--color-ink); }
 .hero__bio { max-width: 38rem; margin-bottom: var(--space-l); }
-.hero__media { justify-self: center; position: relative; width: min(100%, 18rem); }
+.hero__media {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 18rem);
+  padding: 0 0.9rem 0.9rem 0;
+}
 .hero__media::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: 0.9rem 0 0 0.9rem;
   border-radius: 50%;
   background: var(--color-accent);
-  transform: translate(0.9rem, 0.9rem);
 }
 .hero__photo {
   position: relative;
