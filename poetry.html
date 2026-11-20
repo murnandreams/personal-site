@@ -3,30 +3,84 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devin's Poetry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poetry | Devin Murnan</title>
+  <meta name="description" content="Original poems by Devin Murnan: Fire and Love.">
+  <meta name="theme-color" content="#faf9f7">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Poetry | Devin Murnan">
+  <meta property="og:description" content="A few original poems by Devin Murnan.">
+  <meta property="og:image" content="images/Picture1.jpg">
+  <meta property="og:image:alt" content="Portrait of Devin Murnan">
+  <script src="js/theme.js"></script>
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/lora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="shortcut icon" href="favicon.ico">
-
+  <link rel="icon" href="favicon.ico">
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
-  <h1>Poetry</h1>
-  <!-- Site Directory -->
-  <nav class="site-nav">
-    <a href="index.html">Index</a>
-    <a href="hobbies.html">Hobbies</a>
-    <a href="contact.html">Contact Me</a>
-  </nav>
-  <hr>
-  <section class="centered">
-    <h3>Fire</h3>
-    <p>With fire we consume and exhume, christened with heat that we lost in the womb. With fire we dance, we prance and we sing. Fire is a wonderful thing.</p>
-    <h3>Love</h3>
-    <p>Hearts in battle, in our chests they rattle, stuck in a cage, related to rage. With love we run, with love we hide. With love we hate, with love we relate. A frozen pond, or a concrete lake. We sing a song, of loving mates. Feel the tune, and
-      don't leave soon. Unpack your bags, stay here with me. We might see what we can be.</p>
-  </section>
-  <hr>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">Devin Murnan<span class="brand__dot" aria-hidden="true"></span></a>
+      <div class="header-actions">
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="poetry.html" aria-current="page">Poetry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="icon-button theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="section" aria-labelledby="page-title">
+      <div class="container">
+        <header class="section-header section-header--center">
+          <p class="eyebrow">Original writing</p>
+          <h1 id="page-title">Poetry</h1>
+        </header>
+        <div class="prose">
+          <article class="poem reveal" aria-labelledby="poem-fire">
+            <h2 id="poem-fire">Fire</h2>
+            <p>With fire we consume and exhume, christened with heat that we lost in the womb. With fire we dance, we prance and we sing. Fire is a wonderful thing.</p>
+          </article>
+          <article class="poem reveal" aria-labelledby="poem-love">
+            <h2 id="poem-love">Love</h2>
+            <p>Hearts in battle, in our chests they rattle, stuck in a cage, related to rage. With love we run, with love we hide. With love we hate, with love we relate. A frozen pond, or a concrete lake. We sing a song, of loving mates. Feel the tune, and
+              don't leave soon. Unpack your bags, stay here with me. We might see what we can be.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© Devin Murnan. Built by hand with HTML, CSS and a little JavaScript.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="poetry.html" aria-current="page">Poetry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 </body>
 
 </html>
