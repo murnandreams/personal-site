@@ -3,227 +3,261 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devin's Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devin Murnan | Software Engineering Apprentice</title>
+  <meta name="description" content="Devin Murnan, Software Engineering Apprentice at World Wide Technology: skills, education, software proficiencies and work experience.">
+  <meta name="theme-color" content="#faf9f7">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Devin Murnan | Software Engineering Apprentice">
+  <meta property="og:description" content="Skills, education, software proficiencies and work experience of Devin Murnan, Software Engineering Apprentice at World Wide Technology.">
+  <meta property="og:image" content="images/Picture1.jpg">
+  <meta property="og:image:alt" content="Portrait of Devin Murnan">
+  <script src="js/theme.js"></script>
+  <link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/lora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="shortcut icon" href="favicon.ico">
-
+  <link rel="icon" href="favicon.ico">
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
-  <table class="profile">
-    <tr>
-                                                          <!-- Quick and dirty inline CSS, future projects utilize a stylesheet as is best practice -->
-      <td><img src="images/Picture1.jpg" alt="Devin Profile Picture" style="width:200px;height:200px;border-radius:50%;">
-        <!--  <img src="images/devin.jpg" alt="Backup image"> -->
-      </td>
-      <td>
-        <h1>Devin Murnan🍋</h1>
-        <p><em>Software Engineering Apprentice at <strong><a href="https://www.wwt.com/">World Wide Technology</a></strong></em></p>
-        <!-- Site Directory -->
-        <nav class="site-nav">
-          <a href="hobbies.html">Hobbies</a>
-          <a href="contact.html">Contact Me</a>
-          <a href="poetry.html">Poetry</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">Devin Murnan<span class="brand__dot" aria-hidden="true"></span></a>
+      <div class="header-actions">
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="poetry.html">Poetry</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </nav>
-        <p>Hey there! I'm a Software Engineering Apprentice employed at World Wide Technology.
-          I am an aspiring web/application developer, I built this website in my spare time, in an effort to teach myself about HTML and CSS.
-          I make my own cold brew coffee, and I build computers for friends and family.</p>
-      </td>
-    </tr>
-  </table>
-  <hr>
-  <h3 class="centered">Relevant Education</h3>
+        <button class="icon-button theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-  <h5> Edwardsville High School</h5>
-  <ul>
-    <li>Programming in Java(Special Projects)
-      <ul>
-        <li><a href="http://www.meinzeit.com/webTeach/projects/student/povRay/index.htm">Featured on class website for "Animated Blobs" in spring of 2015</a></li>
-      </ul>
-    </li>
-    <li>Networking</li>
-  </ul>
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div>
+          <p class="eyebrow">Hey there!</p>
+          <h1 id="hero-title">Devin Murnan <span aria-hidden="true">🍋</span></h1>
+          <p class="hero__role"><em>Software Engineering Apprentice at <strong><a href="https://www.wwt.com/">World Wide Technology</a></strong></em></p>
+          <p class="hero__bio lead">I'm a Software Engineering Apprentice employed at World Wide Technology.
+            I am an aspiring web/application developer, I built this website in my spare time, in an effort to teach myself about HTML and CSS.
+            I make my own cold brew coffee, and I build computers for friends and family.</p>
+          <div class="button-row">
+            <a class="button button--primary" href="contact.html">Contact me</a>
+            <a class="button button--secondary" href="#experience">Experience</a>
+          </div>
+        </div>
+        <div class="hero__media">
+          <img class="hero__photo" src="images/Picture1.jpg" alt="Portrait of Devin Murnan" width="320" height="320">
+        </div>
+      </div>
+    </section>
 
-  <h5>Lewis and Clark Community College</h5>
-  <ul>
-    <li>PC Servicing</li>
-    <li>Computer Network and System Internship</li>
-    <li>Introduction To Computer Networking</li>
-  </ul>
+    <section class="section section--surface" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">What I work with</p>
+          <h2 id="skills-title">Skills</h2>
+        </header>
+        <div class="grid">
+          <article class="card reveal">
+            <h3>Programming Languages</h3>
+            <ul class="pill-list">
+              <li class="pill">Javascript</li>
+              <li class="pill">HTML</li>
+              <li class="pill">CSS</li>
+              <li class="pill">Python</li>
+              <li class="pill">Java</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Libraries</h3>
+            <ul class="pill-list">
+              <li class="pill">React</li>
+              <li class="pill">Bootstrap</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Frameworks</h3>
+            <ul class="pill-list">
+              <li class="pill">Angular</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Hardware</h3>
+            <ul class="pill-list">
+              <li class="pill">Hardware Troubleshooting</li>
+              <li class="pill">Networking</li>
+              <li class="pill">Cabling</li>
+              <li class="pill">A/V Setup</li>
+              <li class="pill">Servers</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <h5>Professional Training</h5>
-  <ul>
-    <li><a href="https://wwt.udemy.com/course/the-complete-web-development-bootcamp/">The Complete 2021 Web Development Bootcamp</a>
-      <ul>
-        <li>Authored by Dr. Angela Yu <a href="https://www.appbrewery.co/">The App Brewery</a></li>
-      </ul>
-    </li>
-  </ul>
-  <hr>
-  <!--Begin Skills Section, uses tables to display skill and skill proficiency-->
-  <h3 class="centered">Skills</h3>
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Learning</p>
+          <h2 id="education-title">Relevant Education</h2>
+        </header>
+        <div class="grid">
+          <article class="card reveal">
+            <h3>Edwardsville High School</h3>
+            <ul>
+              <li>Programming in Java (Special Projects)
+                <ul>
+                  <li><a href="http://www.meinzeit.com/webTeach/projects/student/povRay/index.htm">Featured on class website for "Animated Blobs" in spring of 2015</a></li>
+                </ul>
+              </li>
+              <li>Networking</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Lewis and Clark Community College</h3>
+            <ul>
+              <li>PC Servicing</li>
+              <li>Computer Network and System Internship</li>
+              <li>Introduction To Computer Networking</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Professional Training</h3>
+            <ul>
+              <li><a href="https://wwt.udemy.com/course/the-complete-web-development-bootcamp/">The Complete 2021 Web Development Bootcamp</a>
+                <ul>
+                  <li>Authored by Dr. Angela Yu, <a href="https://www.appbrewery.co/">The App Brewery</a></li>
+                </ul>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section--surface" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <header class="section-header section-header--center reveal">
+          <p class="eyebrow">Career</p>
+          <h2 id="experience-title">Work Experience</h2>
+        </header>
+        <ol class="timeline" reversed>
+          <li class="timeline__item reveal">
+            <article class="card">
+              <p class="timeline__date"><time datetime="2021">2021</time>–Present</p>
+              <h3>Internal Software Engineering Apprentice</h3>
+              <p class="timeline__company">World Wide Technology</p>
+              <p>Entry level learning position focused towards training on industry-level programming standards.
+                Works on a team of developers to assist with building applications for customers that have contracted with WWT. Focus on AGILE programming methodology and SOLID principles.</p>
+            </article>
+          </li>
+          <li class="timeline__item reveal">
+            <article class="card">
+              <p class="timeline__date"><time datetime="2019">2019</time>–<time datetime="2021">2021</time></p>
+              <h3>L4 Integration Technician</h3>
+              <p class="timeline__company">World Wide Technology</p>
+              <p>Managed systematic warehouse material through the use of <strong>Oracle Inventory</strong>, <strong>SecureCRT</strong>. Used <strong>Salesforce</strong> for communication cross-organization. Assisted with multiple programs including <strong>Twitch</strong> and <strong>Amazon</strong> in the
+                warehouse lab. Previously responsible for performing physical maintenance on Cisco, HP, and Dell servers in accordance to WWT ESD Standards.</p>
+            </article>
+          </li>
+          <li class="timeline__item reveal">
+            <article class="card">
+              <p class="timeline__date"><time datetime="2017">2017</time>–<time datetime="2019">2019</time></p>
+              <h3>Catering Manager</h3>
+              <p class="timeline__company">Jimmy Johns</p>
+              <p>Maintained customer relations by sampling to local functions and businesses. Responsible for training employees on guerilla marketing techniques. Responsible for mapping out local businesses by surveying the store's delivery zone.
+                Maintained excellent customer service and cleanliness in a fast paced environment.</p>
+            </article>
+          </li>
+          <li class="timeline__item reveal">
+            <article class="card">
+              <p class="timeline__date"><time datetime="2016">2016</time>–<time datetime="2017">2017</time></p>
+              <h3>Flow Team</h3>
+              <p class="timeline__company">Target</p>
+              <p>Pick and stock product, provide excellent customer service to shoppers.</p>
+            </article>
+          </li>
+          <li class="timeline__item reveal">
+            <article class="card">
+              <p class="timeline__date"><time datetime="2016">2016</time></p>
+              <h3>Computer Network and Systems internship</h3>
+              <p class="timeline__company">Lewis and Clark Community College</p>
+              <p>Design, maintain and implement network solutions for the Trimpe Advanced Technology Center. Terminate and run RJ45 cables to provide network connectivity to student workstations. Active collaboration on a team of three to achieve network
+                solutions.</p>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-  <table class="skills">
-    <tbody>
-      <tr>
-        <th scope="rowgroup">Programming Languages</th>
-      </tr>
+    <section class="section" id="software" aria-labelledby="software-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow">Tools</p>
+          <h2 id="software-title">Relevant Software Proficiencies</h2>
+        </header>
+        <div class="grid">
+          <article class="card reveal">
+            <h3><a href="https://www.oracle.com/applications/ebusiness/">Oracle</a></h3>
+            <p class="card__meta">Inventory Management Module, used for visibility of warehouse material.</p>
+          </article>
+          <article class="card reveal">
+            <h3><a href="https://www.vandyke.com/products/securecrt/">SecureCRT</a></h3>
+            <p class="card__meta">Terminal emulation used for inventory management.</p>
+          </article>
+          <article class="card reveal">
+            <h3><a href="https://atom.io/">Atom</a></h3>
+            <p class="card__meta">My first IDE, used to create this site.</p>
+          </article>
+          <article class="card reveal">
+            <h3><a href="https://visualstudio.microsoft.com/">Microsoft Visual Studio</a></h3>
+            <p class="card__meta">Preferred IDE.</p>
+          </article>
+          <article class="card reveal">
+            <h3><a href="https://desktop.github.com/">Github Desktop</a></h3>
+            <p class="card__meta">Version control for projects.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Salesforce Lightning</h3>
+            <p class="card__meta">Creation of CCCs to promote clear communication among teammates.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Microsoft 365</h3>
+            <p class="card__meta">Excel, Word and Powerpoint</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-      <tr>
-        <td>Javascript</td>
-      </tr>
-
-      <tr>
-        <td>HTML</td>
-      </tr>
-
-      <tr>
-        <td>CSS</td>
-      </tr>
-
-      <tr>
-        <td>Python</td>
-      </tr>
-
-      <tr>
-        <td>Java</td>
-      </tr>
-    </tbody>
-
-    <tbody>
-      <tr>
-        <th scope="rowgroup">Libraries</th>
-      </tr>
-      <tr>
-        <td>React</td>
-      </tr>
-      <tr>
-        <td>Bootstrap</td>
-      </tr>
-    </tbody>
-
-    <tbody>
-      <tr>
-        <th scope="rowgroup">Frameworks</th>
-      </tr>
-      <tr>
-        <td>Angular</td>
-      </tr>
-    </tbody>
-
-    <tbody>
-      <tr>
-        <th scope="rowgroup">Hardware</th>
-      </tr>
-      <tr>
-        <td>Hardware Troubleshooting</td>
-      </tr>
-
-      <tr>
-        <td>Networking</td>
-      </tr>
-
-      <tr>
-        <td>Cabling</td>
-      </tr>
-
-      <tr>
-        <td>A/V Setup</td>
-      </tr>
-      <tr>
-        <td>Servers</td>
-      </tr>
-    </tbody>
-  </table>
-  <hr>
-
-  <h3 class="centered">Relevant Software Proficiencies</h3>
-  <ul>
-    <li><a href="https://www.oracle.com/applications/ebusiness/">Oracle</a>
-      <ul>
-        <li>Inventory Management Module, used for visibility of warehouse material.</li>
-      </ul>
-    </li>
-    <li><a href="https://www.vandyke.com/products/securecrt/">SecureCRT</a>
-      <ul>
-        <li>Terminal emulation used for inventory management.</li>
-      </ul>
-    </li>
-    <li><a href="https://atom.io/">Atom</a>
-      <ul>
-        <li>My first IDE, used to create this site.</li>
-      </ul>
-    </li>
-    <li><a href="https://visualstudio.microsoft.com/">Microsoft Visual Studio</a>
-      <ul>
-        <li>Preferred IDE.</li>
-      </ul>
-    </li>
-    <li><a href="https://desktop.github.com/">Github Desktop</a>
-      <ul>
-        <li>Version control for projects.</li>
-      </ul>
-    </li>
-    <li>Salesforce Lightning
-      <ul>
-        <li>Creation of CCCs to promote clear communication among teammates.</li>
-      </ul>
-    </li>
-    <li>Microsoft 365, Excel, Word and Powerpoint</li>
-  </ul>
-
-  <hr>
-
-  <h3 class="centered">Work Experience</h3>
-  <table class="work">
-    <thead>
-      <tr>
-        <th>Dates</th>
-        <th>Company</th>
-        <th>Job Title</th>
-        <th>Responsiblities</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>2016-2017</td>
-        <td>Target</td>
-        <td>Flow Team</td>
-        <td>Pick and stock product, provide excellent customer service to shoppers.</td>
-      </tr>
-      <tr>
-        <td>2016</td>
-        <td>Lewis and Clark Community College</td>
-        <td>Computer Network and Systems internship</td>
-        <td>Design, maintain and implement network solutions for the Trimpe Advanced Technology Center. Terminate and run RJ45 cables to provide network connectivity to student workstations. Active collaboration on a team of three to achieve network
-          solutions.</td>
-      </tr>
-      <tr>
-        <td>2017-2019</td>
-        <td>Jimmy Johns</td>
-        <td>Catering Manager</td>
-        <td>Maintained customer relations by sampling to local functions and businesses. Responsible for training employees on guerilla marketing techniques. Responsible for mapping out local businesses by surveying the store's delivery zone.
-          Maintained excellent customer service and cleanliness in a fast paced environment.</td>
-      </tr>
-      <tr>
-        <td>2019-2021</td>
-        <td>World Wide Technology</td>
-        <td>L4 Integration Technician</td>
-        <td>Managed systematic warehouse material through the use of <strong>Oracle Inventory</strong>, <strong>SecureCRT</strong>. Used <strong>Salesforce</strong> for communication cross-organization. Assisted with multiple programs including <strong>Twitch</strong> and <strong>Amazon</strong> in the
-          warehouse lab. Previously
-          responsible for performing physical maintenance on Cisco, HP, and Dell servers in accordance to WWT ESD Standards.
-        </td>
-      </tr>
-      <tr>
-        <td>2021-Present</td>
-        <td>World Wide Technology</td>
-        <td>Internal Software Engineering Apprentice</td>
-        <td>Entry level learning position focused towards training on industry-level programming standards. 
-          Works on a team of developers to assist with building applications for customers that have contracted with WWT. Focus on AGILE programming methodology and SOLID principles.</td>
-      </tr>
-    </tbody>
-  </table>
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© Devin Murnan. Built by hand with HTML, CSS and a little JavaScript.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="poetry.html">Poetry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 </body>
 
 </html>
