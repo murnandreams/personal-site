@@ -60,6 +60,11 @@
     for (var j = 0; j < reveals.length; j++) observer.observe(reveals[j]);
   }
 
+  // Never leave content hidden when printing.
+  window.addEventListener("beforeprint", function () {
+    for (var k = 0; k < reveals.length; k++) reveals[k].classList.add("is-visible");
+  });
+
   /* Copy email button ----------------------------------------------------- */
   var copyButtons = document.querySelectorAll("[data-copy]");
 
