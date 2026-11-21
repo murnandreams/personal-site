@@ -7,7 +7,7 @@ and a little vanilla JavaScript. There is no build step and no dependencies.
 
 | File | Description |
 | --- | --- |
-| `index.html` | Home page: hero with bio, skills, education, work experience timeline and software proficiencies |
+| `index.html` | Home page in CV format: hero with bio and contact line, professional summary (seniority stats and highlights), work experience timeline, skills, education and tools. Includes print styles so it can be saved as a PDF CV. |
 | `hobbies.html` | Hobbies and interests, as a card grid |
 | `poetry.html` | A few original poems |
 | `contact.html` | Email address with mailto and copy buttons, plus a `mailto:` contact form |
