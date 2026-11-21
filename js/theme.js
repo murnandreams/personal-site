@@ -31,7 +31,7 @@
 
   function updateMeta(theme) {
     var meta = document.querySelector('meta[name="theme-color"]:not([media])');
-    if (meta) meta.setAttribute("content", theme === "dark" ? "#1a1a1a" : "#faf9f7");
+    if (meta) meta.setAttribute("content", theme === "dark" ? "#0b1220" : "#f8fafc");
   }
 
   function updateToggles(theme) {
